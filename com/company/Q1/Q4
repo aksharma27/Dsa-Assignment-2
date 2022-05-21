@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class PointType {
+	int x,y;
+public void displayP() {
+	System.out.println("Enter the points: ");
+	Scanner in = new Scanner(System.in);
+	x= in.nextInt();
+	y=in.nextInt();
+//	System.out.println("");
+	
+}
+int getX(int x) {
+//	this.x=x;
+	return x;
+}
+int getY(int y) {
+//	this.y=y;
+	return y;
+}
+public void setX() {
+	this.x=x;
+//	return x;
+}
+public void setY() {
+//	return y;
+	this.y=y;
+}
+}
+
+
+public class CircleType extends PointType {
+	Scanner in = new Scanner(System.in);
+	
+ double r;
+ void Radius(PointType p1, PointType p2) {
+	 r=Math.sqrt(Math.pow((p2.x-p1.x),2)+ Math.pow((p2.y-p1.y),2));
+ }
+ double Area() {
+	 double a;
+	 a=Math.PI*r*r;
+			 return a;
+ }
+ double Circumference() {
+	 double circum;
+	 circum=2*Math.PI*r;
+			 return circum;
+ }
+ void diplay() {
+	 System.out.println();
+ }
+ public static void main(String[] args) {
+	CircleType p=new CircleType();
+	
+}
+}
