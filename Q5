@@ -1,0 +1,52 @@
+ class Person {
+ String name; int age;
+ Person(String name, int age)
+ {
+	 this.name=name;
+	 this.age=age;
+ }
+}
+
+
+public class Student extends Person{
+	String course; int roll; float marks;
+	Student(String name, int age, String course, int roll, float marks){
+		super(name, age);
+		this.course=course;
+		this.roll=roll;
+		this.marks=marks;
+	}
+	void displays() {
+		System.out.println("Name: "+name+" \n Age: "+age+" \n Course: "+course+"\n Roll: "+roll+"\n Marks: "+marks);
+		
+	}
+} 
+
+
+public class Teacher extends Person{
+String sub;
+int hr;
+Teacher(String name, int age, String sub, int hr){
+	super(name, age);
+	sub=sub;
+	hr=hr;
+}
+void display() {
+	System.out.println("Teachr's Name: "+name);
+	System.out.println("Age: "+age);
+	System.out.println("Subject Assigned: "+sub);
+	System.out.println("Hours Assigned: "+hr);
+}
+}
+
+
+
+
+public class Q5 {
+ public static void main(String[] args) {
+	Student s= new Student("Ahishek",15, "dsa", 64, 9);
+	s.displays();
+	Teacher t= new Teacher("India", 49, "dsa",40);
+	t.display();
+}
+}
