@@ -1,0 +1,53 @@
+//Package Q9;
+import java.util.*;
+public class Student {
+String name;
+int roll;
+public void input() {
+	Scanner in = new Scanner(System.in);
+	System.out.println("enter name and roll of the student");
+	name=in.nextLine();
+	roll=in.nextInt();
+}
+public void output() {
+	System.out.println("name: "+name+" roll: "+roll);
+	}
+}
+
+
+
+
+import java.util.*;
+import Q9_2.Sports;
+public class Test extends Student {
+int mark1, mark2;
+public void input() {
+	super.input();
+	Scanner in =new Scanner(System.in);
+	System.out.println("enter marks1 and marks 2");
+	mark1=in.nextInt();
+	mark2=in.nextInt();
+}
+public void output() {
+	super.output();
+	System.out.println(mark1+" "+mark2);
+	System.out.println("Total marks: "+(mark1+mark2));
+	System.out.println("Marks1: "+mark1+" Marks2: "+mark2);
+	System.out.println("Total score: "+(Sports.score1+Sports.score2));
+}
+}
+
+
+
+
+
+
+
+
+
+//Package Q9_2
+public interface Sports {
+int score1=0;
+int score2=0;
+ 
+}
