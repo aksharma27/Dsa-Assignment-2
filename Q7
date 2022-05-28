@@ -1,0 +1,42 @@
+public interface q7 {
+public void display();
+// int count();
+int Count();
+
+}
+
+
+
+
+
+
+
+public class Q7 implements q7 {
+	static int maxcount;
+	String name;
+	String Demo(String n){
+		name=n;
+		return name;
+	}
+	public void display() {
+		System.out.println("Name: "+name);
+		System.out.println("length: "+Count());
+	}
+	@Override
+	 public int Count() {
+		char ch[]=name.toCharArray();
+		for(int i =0; i<name.length(); i++) {
+			if(ch[i]==' ') {
+				continue;
+			}
+			maxcount=i;
+		}
+		return maxcount;
+	}
+//	@Override
+//	public int Count() {
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
+	
+}
