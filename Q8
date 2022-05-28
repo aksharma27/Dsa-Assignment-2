@@ -1,0 +1,113 @@
+public interface EmpInterface {
+	public void displayEmp();
+
+//	public void giveBonus(double bon);
+}
+
+
+
+
+
+
+public abstract class Employee implements EmpInterface{
+	int empID; String fName; String lName; double salary;
+	Employee(int empID, String fname,  String lname, double salary){
+		this.empID=empID; 
+		this.fName=fName; this.lName=lName;
+		this.salary=salary;
+	}
+}
+
+
+
+
+
+public class Manager extends Employee{
+	double bonus;
+ Manager(int empID, String fname, String lname, double salary, double bonus) {
+		super(empID, fname, lname, salary);
+		this.bonus=bonus;
+	}
+
+
+ 
+ @Override
+ public void displayEmp(){
+	 System.out.println(empID+" "+fName+" "+lName+" "+salary+" "+bonus);
+ }
+ public void giveBonus(double amount) {
+	 salary+=amount;
+ }
+}
+
+
+
+
+
+
+import java.util.*;
+public class Test {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Input manager array");
+		int n = in.nextInt();
+		EmpInterface a[]=new EmpInterface[n];
+		double bon=0.0;
+		for(int i =0; i<a.length; i++) {
+			System.out.println("Input empi, fname, lname, slary and bonus");
+			int id=in.nextInt();
+			String fn=in.nextLine();
+			String ln=in.nextLine();
+			double sal=in.nextDouble();
+			try {
+				bon=in.nextDouble();
+				if(bon<=0) {
+					throw new ArithmeticException("invalid bous");
+				}import java.util.*;
+public class Test {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Input manager array");
+		int n = in.nextInt();
+		EmpInterface a[]=new EmpInterface[n];
+		double bon=0.0;
+		for(int i =0; i<a.length; i++) {
+			System.out.println("Input empi, fname, lname, slary and bonus");
+			int id=in.nextInt();
+			String fn=in.nextLine();
+			String ln=in.nextLine();
+			double sal=in.nextDouble();
+			try {
+				bon=in.nextDouble();
+				if(bon<=0) {
+					throw new ArithmeticException("invalid bous");
+				}
+			}
+			catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+			a[i]=new Manager(id, fn, ln, sal, bon);
+			
+		}
+		System.out.println("The details are: ");
+		for(int i =0; i<a.length; i++) {
+		    ((Manager) a[i]).giveBonus(bon);
+			a[i].displayEmp();
+		}
+	}
+}
+
+			}
+			catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
+			a[i]=new Manager(id, fn, ln, sal, bon);
+			
+		}
+		System.out.println("The details are: ");
+		for(int i =0; i<a.length; i++) {
+		    ((Manager) a[i]).giveBonus(bon);
+			a[i].displayEmp();
+		}
+	}
+}
