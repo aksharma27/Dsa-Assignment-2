@@ -6,6 +6,12 @@ public class Q5 {
 		  for(E element : inputArray) {
 			  System.out.println(element);
 		  }
+		  
+		  //OR USE THIS
+		  //for(int i=0; i<inputArray.length; i++) {
+		  //	  System.out.println(inputArray[i]);
+		  // }
+		  
 	  }
 	  public static void main(String[] args) {
 		Integer intArray[]= {10,20,30,40};
