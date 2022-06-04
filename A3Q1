@@ -1,0 +1,21 @@
+import java.util.*;
+public class Q1 {
+		public static void main(String[] args) {
+			Scanner n = new Scanner(System.in);
+			int num=n.nextInt();
+			try {
+				if(num<0) {
+					throw new NumberFormatException("Lucky number can't be negative");
+				
+				}
+				else {
+					System.out.println("Your lucky number is : "+num);
+				}
+				}
+				catch(Exception e) {
+					System.out.println(e);
+					
+				}
+			System.out.println("Rest of the code");
+		}
+}
