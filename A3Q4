@@ -1,0 +1,31 @@
+
+public class Q4 {
+	public static void main(String[] args) {
+		Box<String>  s1= new Box<String>();
+		Box<String> s2 = s1;		
+		System.out.println(s1.type+" "+s2.type);
+		s1.type="Abhishek";
+		System.out.println(s1.type+" "+s2.type);
+		
+		Box<Integer>  i1= new Box<Integer>();
+		Box<Integer> i2 = i1;		//i2 points to i1
+		System.out.println(i1.type+" "+i2.type);
+		i1.type=10;
+		System.out.println(i1.type+" "+i2.type);
+		
+		
+		Box<Object>  o1= new Box<Object>();
+		Box<Object> o2 = o1;		
+		System.out.println(o1.type+" "+o2.type);
+		o1.type=10;
+		System.out.println(o1.type+" "+o2.type);
+	}
+}
+
+
+
+
+class Box<T>{			//T is the datatype(user defined)
+	T type;
+	//int type
+}
