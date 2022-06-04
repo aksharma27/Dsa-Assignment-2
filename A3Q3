@@ -1,0 +1,41 @@
+import java.util.*;
+public class StudentQ3 {
+	 int mark;
+	String name;
+	void input() {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter name and marks");
+		 name=in.nextLine();
+		mark=in.nextInt();
+		try {
+			if(mark>100) {
+				throw new MarksOutOfBoundException("Marks cannot be greater than 100");
+			}
+		}
+		catch(MarksOutOfBoundException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Rest of the code");
+	}
+	void display() {
+		System.out.println("name: "+name+" marks: "+mark);
+	}
+	
+	public static void main(String[] args) {
+		StudentQ3 s= new StudentQ3();
+		s.input();
+		s.display();
+		
+}
+}
+
+
+
+
+
+
+public class MarksOutOfBoundException extends Exception {
+	public MarksOutOfBoundException(String string) {
+		System.out.println("Marks cannot be greater than 100");
+	}
+}
