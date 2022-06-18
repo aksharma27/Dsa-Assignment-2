@@ -1,0 +1,22 @@
+import java.util.*;
+public class Q8 {
+public static void main(String[] args) {
+	System.out.println("Enter the number and its power to be counter");
+	Scanner in = new Scanner(System.in);
+	int n = in.nextInt();
+	int e =in.nextInt();
+	int ans=power(n, e);
+	System.out.println(ans);
+}
+
+static int power(int n, int e) {
+	if(e==0) {
+		return 1;
+	}
+	if(n<=0 || e<0) {
+		return -1;
+	}
+	
+	return n*power(n, e-1);
+}
+}
